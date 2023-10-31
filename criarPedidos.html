@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4280a3ebdc.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./assets/js/cadastrar.js" defer></script>
+  <title> Receitas do Tadalafilo</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper center green">
+      <a href="#" class="brand-logo center">
+        <i class="material-icons">restaurant</i> Receitas do Tadalafilo
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html"><span class="colored-text">Receitas</span></a></li>
+        <li class="active"><a href="criarPedidos.html"><span class="colored-text">Cadastrar Receitas</span></a></li>
+        <li><a href="perfil.html"><span class="colored-text">Perfil do Cozinheiro</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <main class="container">
+    <h4>
+      Cadastrar Receitas
+    </h4>
+    <div class="row">
+      <div class="input-field col s12 m6 l4">
+        <input id="titulo" type="text" class="validate" minlength="3">
+        <label for="titulo">Receita</label>
+        <span class="helper-text" data-error="Titulo muito curto. Preencha o titulo com pelo menos 3 caracteres"
+          data-sucess="">Digite o nome do prato </span>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col s12">
+        <div class="row">
+          <div class="input-field col s12 m6 l4">
+            <textarea id="descricao" class="materialize-textarea"></textarea>
+            <label for="descricao">Modo de Preparo</label>
+            <span class="helper-text">Descreva como realizar seu prato</span>
+            <span class="helper-text"
+              data-error="Descrição muito curta. Preencha a descrição com pelo menos 8 caracteres" data-sucess="">
+            </span>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="preco" type="number"  class="validate" min="1" max="10">
+              <label for="preco">Dificuldade do prato</label>
+              <span class="helper-text" data-error="Preço invalido. Informe um valor entre 1 a 10" data-success="">
+                Digite o nivel de Dificuldade (1=Muito Facil, 10= muito dificil)
+              </span>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col">
+              <a href="index.html" class="btn red">Cancelar</a>
+            </div>
+            <div class="col">
+              <button id="botao-cadastrar" class="btn green">Salvar Receita</button>
+            </div>
+          </div>
+
+        </div>
+</body>
+
+</html>
